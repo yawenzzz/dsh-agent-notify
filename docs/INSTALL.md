@@ -13,7 +13,7 @@
 
 ```sh
 dsh --version
-dsh plugin --profile web add https://github.com/yawenzzz/dsh-agent-notify/releases/download/v0.1.0/yawenzzz-dsh-agent-notify-0.1.0.tgz
+dsh plugin --profile web add https://github.com/yawenzzz/dsh-agent-notify/releases/download/v0.1.1/yawenzzz-dsh-agent-notify-0.1.1.tgz
 dsh --profile web
 ```
 
@@ -25,7 +25,7 @@ dsh --profile web
 
 ```sh
 dsh --profile notify --from-default-profile web --dump-config
-dsh plugin --profile notify add https://github.com/yawenzzz/dsh-agent-notify/releases/download/v0.1.0/yawenzzz-dsh-agent-notify-0.1.0.tgz
+dsh plugin --profile notify add https://github.com/yawenzzz/dsh-agent-notify/releases/download/v0.1.1/yawenzzz-dsh-agent-notify-0.1.1.tgz
 dsh --profile notify --port 0
 ```
 

@@ -1,6 +1,6 @@
 {
   "name": "@yawenzzz/dsh-agent-notify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Durable proactive Agent notifications and an inbox UI for official DeepSeek Harness",
   "type": "module",
   "license": "MIT",
