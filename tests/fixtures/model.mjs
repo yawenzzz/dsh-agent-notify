@@ -43,7 +43,10 @@ export function apply(ctx) {
       const events=session?.snapshotEvents()??[]
       return Response.json({type:'server-response',rpcId:input.rpcId,result:{ok:true,value:{
         calls:events.filter(event=>event.type==='tool/call').map(event=>({name:event.data.name,callId:event.data.callId})),
-        results:events.filter(event=>event.type==='tool/result').map(event=>({callId:event.data.message.toolCallId,isError:event.data.message.isError})),
+        results:events.filter(event=>event.type==='tool/result').map(event=>({
+          callId:event.data.message.toolCallId,isError:event.data.message.isError,
+          text:event.data.message.content.filter(block=>block.type==='text').map(block=>block.text).join(''),
+        })),
       }}})
     },
   }))

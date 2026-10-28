@@ -34,7 +34,7 @@ export function registerNotifyTool(ctx: Context, service: NotifyService): void {
     },
     execute: async (args, execution) => {
       const receipt = service.send(notificationInputSchema.parse(args), sourceFromExecution(execution), execution.signal)
-      return { result: JSON.stringify({ ...receipt, status: receipt.state === 'sent' ? 'sent' : 'queued', read: false }) }
+      return { result: JSON.stringify({ ...receipt, status: receipt.state === 'sent' ? 'sent' : 'queued' }) }
     },
   })), 'agent-notify: notification tool')
 }
